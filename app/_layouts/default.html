@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    {% include styles.html %}
+
+    <!-- build:js({app,.tmp}) /assets/js/modernizr.js -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+
+  <body>
+    <div id="top">
+      <div id="logo">
+        <a href="index.html"><img src="http://barborka.edu.pl/style/logo.png" id="logo"></a>
+      </div>
+      
+      <div id="box">
+        <div id="menubar">
+          <ul id="menu">
+            <li><a href="obarborce.html">O BARBÓRCE</a></li>
+            <li><a href="infografiki.html">INFOGRAFIKI</a></li>
+            <li class="selected"><a href="gry.html">GRY</a></li>
+            <li><a href="pobierz.html">POBIERZ</a></li>
+            <li><a href="kontakt.html">KONTAKT</a></li>
+            <li><a href="partnerzy.html">PARTNERZY</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div id="clear"></div>      
+    <div id="main" class="game">
+        {{ content }}
+
+    </div>
+    {% include scripts.html %}
+  </body>
+</html>
