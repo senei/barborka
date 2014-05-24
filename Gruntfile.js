@@ -266,7 +266,7 @@ module.exports = function (grunt) {
           commit: true,
           push: true,
           message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
-          remote: 'git@github.com:senei/barburka.git',
+          remote: 'git@github.com:senei/barborka.git',
           branch: 'gh-pages'
         }
       }
@@ -277,15 +277,15 @@ module.exports = function (grunt) {
           patterns: [
             {
               match: /("|'?)\/?assets\//g,
-              replacement: '$1http://senei.github.io/senei/barburka/assets/'
+              replacement: '$1http://senei.github.io/senei/barborka/assets/'
             },
             {
               match: /(<a[^>]*href="?)(\/)/g,
-              replacement: '$1http://senei.github.io/senei/barburka/'
+              replacement: '$1http://senei.github.io/senei/barborka/'
             },
             {
               match: /(<form[^>]*action="?)(\/)/g,
-              replacement: '$1http://senei.github.io/senei/barburka/'
+              replacement: '$1http://senei.github.io/senei/barborka/'
             }
           ]
         },
