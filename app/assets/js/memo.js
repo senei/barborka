@@ -91,8 +91,8 @@
         self.checkClick = function (object) {
             var tabObject = (object.attr('id')).split('_');
             var number = self.data.tab[tabObject[1]][tabObject[2]];
-
-            var img = '<img  width=160 src="/assets/img/thiles/boardThile_' + self.data.imgTab[number-1] + '.png" alt="memo' + number + '" />';
+            var img = self.dom.images.find('li').eq(number).find("img").clone();
+            
             self.dom.board.find('#' + object.attr('id')).html(img);
             if (!self.data.firstClick) {
                 self.data.firstClick = true;
