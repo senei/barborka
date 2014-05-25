@@ -42,7 +42,7 @@
 	  clear: both; content: "."; display: block; height: 0; visibility: hidden;
 	}
 	a.close_x{
-		background: url("/assets/img/_x_.gif") center no-repeat;
+		background: url("assets/img/_x_.gif") center no-repeat;
 		width: 46px;
 		height: 46px;
     margin-left: 280px;
@@ -71,7 +71,7 @@
 	//	display: none;
 	}
 	ul#memoGame li {
-		background: url("/assets/img/boardThile.png") center no-repeat;
+		background: url("assets/img/boardThile.png") center no-repeat;
 		width: 160px;
 		height: 160px;
 		background-size: 150px;
@@ -140,7 +140,7 @@
 		
 		text-align: center;
 
-		background: black url(/assets/img/mask8white.png) center center no-repeat;
+		background: black url(assets/img/mask8white.png) center center no-repeat;
 		background-size: auto 190px;
 
     transition: background-size 0.2s ease-in, background-color 0.5s ease;
