@@ -102,7 +102,7 @@ module.exports = function (grunt) {
     },
     sass: {
       options: {
-        bundleExec: true,
+        bundleExec: false,
         debugInfo: false,
         lineNumbers: false,
         loadPath: '<%= yeoman.app %>/_bower_components'
@@ -118,7 +118,7 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          debugInfo: true,
+          debugInfo: false,
           lineNumbers: true
         },
         files: [{
@@ -173,7 +173,7 @@ module.exports = function (grunt) {
     htmlmin: {
       dist: {
         options: {
-          collapseWhitespace: true,
+          collapseWhitespace: false,
           collapseBooleanAttributes: true,
           removeAttributeQuotes: true,
           removeRedundantAttributes: false
@@ -192,11 +192,11 @@ module.exports = function (grunt) {
     uglify: {},
     // Usemin adds files to cssmin
     cssmin: {
-      dist: {
-        options: {
-          check: 'gzip'
-        }
-      }
+      // dist: {
+      //   options: {
+      //     check: 'gzip'
+      //   }
+      // }
     },
     imagemin: {
       dist: {

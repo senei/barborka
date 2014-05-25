@@ -3,27 +3,32 @@ layout: default
 title: barborka
 ---
 
-<ul class="tabs">
-	<li><h3>GÓRNICZE<br/>MEMO</h3></li>
-	<li class="selected"><h3><span/>SŁOWNIK</h3></li>
-	<li><h3><span/>RÓŻNICE</h3></li>
-</ul>
 
-<ul class="content">
-	<li> <p>
-	<strong>GÓRNICZE MEMO</strong><br/>
-	<strong>Powodzenia!</strong>
-	</p>
-	<button onClick="location.href='graMemo.html'">graj</button></li>
-	<li class="selected"> <p>
-	<strong>Słownik</strong> to gra, dzięki której poznajemy najważniejsze słowa związane z górnictwem. Pod&nbsp;każdym obrazem pojawiają się 4 różne słowa, z&nbsp;których tylko jest poprawne. Po kliknięciu na błędne słowo, pojawia się ostrzeżenie o popełnieniu błędu. Kliknięcie w poprawne słowo powoduje przejście do następnej gry. słowa dobierają się automatycznie, cała gra składa się z&nbsp;36 różnych słów i obrazów.<br/>
-	<strong>Powodzenia!</strong>
-	</p>
-	<button onClick="location.href='graSlownik.html'">graj</button>
-</li>
-	<li> <p>
-	<strong>RÓŻNICE</strong> <br/>
-	<strong>Powodzenia!</strong>
-	</p>
-	<button onClick="location.href='graRoznice.html'">graj</button></li>
+<h3>Górniczy słownik <span></span>	</h3>
+<a href="/" class="close_x"></a>
+<ul id="slownikGame" >
+	<li><img src="assets/img/words/image-1.png" height="280" alt="img-1"></li>
+	<li><img src="assets/img/words/image-1.png" height="280" alt="img-2"></li>
+</ul>
+<ul id="slownikGameBord" >
+	<li class="yes-off off">
+	<button>word - 1</button>
+	<img src="assets/img/heand-no.png" class="no" alt="no">
+	<img src="assets/img/heand-yes.png" class="yes" alt="yes">
+	</li>
+	<li class="no-off off">
+	<button>word - 2</button>
+	<img src="assets/img/heand-no.png" class="no" alt="no">
+	<img src="assets/img/heand-yes.png" class="yes" alt="yes">
+	</li>
+	<li class="no-off off">
+	<button>word - 3</button>
+	<img src="assets/img/heand-no.png" class="no" alt="no">
+	<img src="assets/img/heand-yes.png" class="yes" alt="yes">
+	</li>
+	<li class="no-off off">
+	<button>word - 4</button>
+	<img src="assets/img/heand-no.png" class="no" alt="no">
+	<img src="assets/img/heand-yes.png" class="yes" alt="yes">
+	</li>
 </ul>

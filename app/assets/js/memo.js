@@ -30,7 +30,6 @@
         self.init = function () {
             self.dom.board = jQuery('#' + id);
 
-            if ( self.dom.board.length > 0 ){
                 self.data.level ++;
 
                 self.dom.images = jQuery('#imagesCache');
@@ -72,7 +71,7 @@
                 self.dom.board.find('li').on('touchstart click', function () {
                     self.checkClick($(this));
                 });
-            }
+            
         };
         self.checkLevel = function () {
             self.data.imgTab = [1,2,3,4,5,6];

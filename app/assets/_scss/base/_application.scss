@@ -37,12 +37,15 @@
 	}
 	ul{
 		margin: 0 auto;
+		&::selection {
+			background: none;
+		}
 	}
 	ul:after {
 	  clear: both; content: "."; display: block; height: 0; visibility: hidden;
 	}
 	a.close_x{
-		background: url("assets/img/_x_.gif") center no-repeat;
+		background: url(../img/_x_.gif) center no-repeat;
 		width: 46px;
 		height: 46px;
     margin-left: 280px;
@@ -50,16 +53,91 @@
     left: 50%;
     top: -10px;
 	}
+	//words
+	// #00a577
+	// #3e3e3f
+	// 400px
+	ul#slownikGame {
+		width: 720px;
+		height: 400px;
+		overflow: hidden;
+		background: #00a577;
+		margin: 15px auto;
+		padding: 20px;
+		position: relative;
+		
+		li {
+			list-style-type: none;
+  		text-align: center;
+  		position: relative;
+  		top: 0;
+  		left: 800px;
+			&:first-child{
+				left: 0px;
+			}
+			img{
+				margin: 5px auto;
+			}
 
+		}	
+
+	}
+	ul#slownikGameBord {
+	  height: 120px;
+    overflow: hidden;
+    width: 600px;
+		margin: 0px auto;
+		position: relative;
+		top: -135px;
+
+		li {
+			list-style-type: none;
+  		text-align: center;
+  		float: left;
+  		width: 25%;
+  		padding-top: 65px;
+  		position: relative;
+  		@include transition (padding-top 0.8s ease-in 0s);
+
+			button{
+				border: none;
+				background: #333;
+				color: white;
+				padding: 10px;
+				width: 79%;
+				font-size: 14px;
+			}
+  		img{
+  			position: absolute;
+				top: 130px;
+				left: 25px;
+				@include transition (top 0.6s ease-in 0.2s);
+  		}
+  		&.off {
+  			padding-top: 120px;
+  		}
+  		&.yes {
+  			padding-top: 120px;
+  			img.yes{
+  				top: 15px;
+  			}	
+  		}
+  		&.no {
+  			padding-top: 120px;
+  			img.no{
+					top: 30px;
+  			}	
+  		}
+  	}
+	}
+
+	//memo
 	ul#memoGame,
 	ul#imagesCache {
 		width: 720px;
 		background: #eff1f0;
 		margin: 15px auto;
 		padding: 20px;
-		&::selection {
-			background: none;
-		}
 	}
 	ul#memoGame li,
 	ul#imagesCache li{
@@ -68,10 +146,10 @@
 		float: left;
 	}
 	ul#imagesCache {
-	//	display: none;
+		display: none;
 	}
 	ul#memoGame li {
-		background: url("assets/img/boardThile.png") center no-repeat;
+		background: url(../img/boardThile.png) center no-repeat;
 		width: 160px;
 		height: 160px;
 		background-size: 150px;
@@ -106,8 +184,8 @@
 	ul.content li {
 		display: none;
 		list-style-type: none;
-  	margin: 0;
-  	padding: 0;
+  	margin: 20px 0;
+  	padding: 0; 
 		text-align: center;
 		&.selected {
 			display: block;
@@ -140,7 +218,7 @@
 		
 		text-align: center;
 
-		background: black url(assets/img/mask8white.png) center center no-repeat;
+		background: black url(../img/mask8white.png) center center no-repeat;
 		background-size: auto 190px;
 
     transition: background-size 0.2s ease-in, background-color 0.5s ease;
