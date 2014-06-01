@@ -183,7 +183,7 @@ ul#menulang li.selected a, ul#menu li.selected a:hover
       <ul id=menu>
         <li id=magic-line></li>
         <li><a href="http://senei.github.io/barborka/o-barborce/">O BARBÓRCE</a></li>
-        <li><a href="http://senei.github.io/barborka/infografiki/">INFOGRAFIKI</a></li>
+        <li class=current_page><a href="http://senei.github.io/barborka/infografiki/">INFOGRAFIKI</a></li>
         <li><a href="http://senei.github.io/barborka/gry/">GRY</a></li>
         <li><a href="http://senei.github.io/barborka/pobierz/">POBIERZ</a></li>
         <li><a href="http://senei.github.io/barborka/kontakt/">KONTAKT</a></li>
@@ -198,9 +198,23 @@ ul#menulang li.selected a, ul#menu li.selected a:hover
       
     </header>
 
-    <section>
-      <h1>Wkrótce zaczynamy!</h1>
-<img class=full src=http://senei.github.io/barborka/assets/img/0935.rodzinka.jpg alt="">
+    <section class=odlicznie>
+        <h1>Jeszcze chwilka,<br> jeszcze moment!</h1>
+  <p class=color>
+	  <br>
+	  <script language=JavaScript>
+		<!--
+		var czas = new Date(2014,05,13,12,00);
+		var dzis = new Date();
+		var licz = czas.getTime() - dzis.getTime();
+		var dni = Math.floor(licz / (1000 * 60 * 60 * 24));
+		var godz = Math.floor(((licz / (1000 * 60 * 60 * 24)) - dni)* 24);
+		document.write(dni + " dni " + godz + " h ")
+		// -->
+		</script>
+	</p>
+		
+
     </section>
     </div>
     <footer> 

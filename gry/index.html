@@ -184,7 +184,7 @@ ul#menulang li.selected a, ul#menu li.selected a:hover
         <li id=magic-line></li>
         <li><a href="http://senei.github.io/barborka/o-barborce/">O BARBÓRCE</a></li>
         <li><a href="http://senei.github.io/barborka/infografiki/">INFOGRAFIKI</a></li>
-        <li><a href="http://senei.github.io/barborka/gry/">GRY</a></li>
+        <li class=current_page><a href="http://senei.github.io/barborka/gry/">GRY</a></li>
         <li><a href="http://senei.github.io/barborka/pobierz/">POBIERZ</a></li>
         <li><a href="http://senei.github.io/barborka/kontakt/">KONTAKT</a></li>
         <li><a href="http://senei.github.io/barborka/partnerzy/">PARTNERZY</a></li>
@@ -198,9 +198,33 @@ ul#menulang li.selected a, ul#menu li.selected a:hover
       
     </header>
 
-    <section>
-      <h1>Wkrótce zaczynamy!</h1>
-<img class=full src=http://senei.github.io/barborka/assets/img/0935.rodzinka.jpg alt="">
+    <section class=gry>
+      <img src=http://senei.github.io/barborka/assets/img/gry/860f.mask8white.png alt="" style=display:none>
+<ul class=tabs>
+	<li data-num=1><h3>GÓRNICZE<br>MEMO</h3></li>
+	<li data-num=2><h3><span>SŁOWNIK</h3></li>
+	<li data-num=3><h3><span>RÓŻNICE</h3></li>
+</ul>
+
+<ul class=content>
+	<li data-num=1> <p>
+	<strong>Górnicze Memo</strong>
+	to gra, która pozwoli zapamiętać najważniejsze obrazy, związane z&nbsp;górnictwem. Po odnalezieniu  pary wybranej karty, odkrywa się nazwa obiektu, który jest na niej przedstawiony. Karty rozstawione są na&nbsp;lewej stronie, w równych rzędach. Każde rozdanie, to 8 kart, czyli 4 pary. Po kliknięciu na lewą stronę karty, odkrywa się jej prawa strona. W przypadku błędnego ruchu, karty ponownie się zakrywają. Poprawne odkrycie wszystkich par powoduje przejście do następnej gry. W razie trudności możliwe jest przejście do następnej gry za pomocą strzałki. Gra składa się łącznie z 36 różnych kart, które dla jednej gry dobierają się automatycznie.<br>
+	<strong>Powodzenia!</strong>
+	</p>
+	<button onclick="location.href='/gry/memo/'">graj</button></li>
+	<li data-num=2> <p>
+	<strong>Słownik</strong> to gra, dzięki której poznajemy najważniejsze słowa związane z górnictwem. Pod&nbsp;każdym obrazem pojawiają się 4 różne słowa, z&nbsp;których tylko jest poprawne. Po kliknięciu na błędne słowo, pojawia się ostrzeżenie o popełnieniu błędu. Kliknięcie w poprawne słowo powoduje przejście do następnej gry. słowa dobierają się automatycznie, cała gra składa się z&nbsp;36 różnych słów i obrazów.<br>
+	<strong>Powodzenia!</strong>
+	</p>
+	<button onclick="location.href='/gry/slownik/'">graj</button>
+	</li>
+	<li data-num=3> <p> 
+	<strong>RÓŻNICE</strong> <br>
+	<strong>Powodzenia!</strong>
+	</p>
+	<button onclick="location.href='/gry/roznice/'">graj</button></li>
+</ul>
     </section>
     </div>
     <footer> 
