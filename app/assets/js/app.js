@@ -1,4 +1,56 @@
-jQuery( document ).ready(function( $ ) {
+$(function() {
+
+    var $magicLine = $("#menu #magic-line");
+    function init(){
+        if($magicLine.length == 1){
+        if($(".current_page a").length == 1){
+            $magicLine
+                .width($(".current_page a").width() + 4)
+                .css("left", $(".current_page a").position().left - 2)
+                .css("top", $(".current_page a").position().top + 26);
+        }
+
+        $magicLine
+            .data("origTop", Math.floor($magicLine.position().top))
+            .data("origLeft", Math.floor($magicLine.position().left))
+            .data("origWidth", $magicLine.width());
+        
+
+        }
+        
+    }
+    init();
+    window.onresize = function(event) {
+    init();
+    };
+    $("#menu li").hover(function() {
+        $el = $(this).find('a');
+        
+        if($el.position()){
+            leftPos = Math.floor($el.position().left-2);
+            topPos = Math.floor($el.position().top+26);
+        } else {
+            leftPos = -2;
+            topPos = 28;
+        }
+        newWidth = $el.width()+4;
+        $magicLine.stop().animate({
+            left: leftPos,
+            top: topPos,
+            width: newWidth
+        });
+    }, function() {
+        $magicLine.stop().animate({
+            top: $magicLine.data("origTop"),
+            left: $magicLine.data("origLeft"),
+            width: $magicLine.data("origWidth")
+        });    
+    });
+
+
+
+    //games
+
     $('ul.tabs li').on('touchstart click', function(){
         $('ul.tabs li').removeClass('selected');
         $('ul.content li').removeClass('selected');
@@ -7,6 +59,7 @@ jQuery( document ).ready(function( $ ) {
         $('ul.tabs li').eq(num).addClass('selected');
         $('ul.content li').eq(num).addClass('selected');
     });
+        
     if ( $("#memoGame").length > 0 ){
 	    new memoGame('memoGame').init();
 	  }

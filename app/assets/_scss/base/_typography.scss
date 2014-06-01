@@ -4,6 +4,10 @@ body {
   font-size: $base-font-size;
   -webkit-font-smoothing: antialiased;
   line-height: $base-line-height;
+  font-weight: 500;
+}
+:selection {
+  background: #00a577;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,6 +15,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.25em;
   margin: 0;
   text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  font-weight: 400;
 }
 
 h1 {

@@ -12,33 +12,32 @@
 @import "neat/app/assets/stylesheets/neat-helpers";
 @import "base/grid-settings";
 @import "neat/app/assets/stylesheets/neat";
-
-
-
+ 
+ 
+ 
 /* Base
- * -----------------------------------------------------------------------------*/
+ * ------------------ -----------------------------------------------------------*/
 @import "base/variables";
 @import "base/extends/extends";
-@import "base/mixins/base";
+@import "base/mixins/base";  
 @import "base/utilities";
-// @import "base/typography";
+@import "base/typography"; 
 // @import "base/forms";
-@import "base/buttons";
+@import "base/buttons"; 
 // @import "base/tables";
-// @import "base/lists";
+@import "base/lists";
 // @import "base/flashes";
-// @import "base/fonts";
-// @import "base/library";
-@import "base/application";
+// @import "base/fonts"; 
+// @import "base/library"; 
 
 
 
 /* Components
  * -----------------------------------------------------------------------------*/
-// @import "component/modal";
-
-
-
+@import "component/main";
+@import "component/games";
 /* Pages
  * -----------------------------------------------------------------------------*/
-// @import "page/home";
+@import "page/kontakt";
+@import "page/oBarborce";
+@import "page/gry";
