@@ -21,7 +21,7 @@ $(function() {
     }
     init();
     window.onresize = function(event) {
-    init();
+        init();
     };
     $("#menu li").hover(function() {
         $el = $(this).find('a');
@@ -65,17 +65,20 @@ $(function() {
 	  }
     if ( $("#slownikGameBord").length > 0 ){
 	    setTimeout(function () {
-				$("#slownikGameBord li").removeClass('off');
-				$("#slownikGameBord li button").on('touchstart click', function(){
-					var li = $(this).parent();
+			$("#slownikGameBord li").removeClass('off');
+			$("#slownikGameBord li button").on('touchstart click', function(){
+			var li = $(this).parent();
         	if(li.hasClass('no-off')){
-						li.addClass('no').removeClass('no-off');
-						setTimeout(function () {
-							li.addClass('no-off').removeClass('no');
+				li.addClass('no').removeClass('no-off');
+				setTimeout(function () {
+					li.addClass('no-off').removeClass('no');
       			}, 1000);
         	} else if (li.hasClass('yes-off')) {
-						li.addClass('yes').removeClass('yes-off');
-      			
+				li.addClass('yes').removeClass('yes-off');
+      			setTimeout(function () {
+                    li.addClass('yes-off').removeClass('yes');
+                    $("#slownikGameBord li").addClass('off');
+                }, 2000);
         	}
         });
       }, 1000);

@@ -76,6 +76,10 @@
             });
             
         };
+
+        window.onresize = function(event) {
+            self.init();
+        };
         self.checkLevel = function () {
             self.data.imgTab = [1,2,3,4,5,6];
             self.dom.board.find('li').remove();
