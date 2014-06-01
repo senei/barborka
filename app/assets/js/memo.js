@@ -29,52 +29,51 @@
 
         self.init = function () {
             self.dom.board = jQuery('#' + id);
-            alert(self.dom.board);
-                self.data.level ++;
+            self.data.level ++;
 
-                self.dom.images = jQuery('#imagesCache');
-                if(self.dom.images.find('li').length == 0){
-                    self.dom.images.hide();
-                    self.dom.images.append('<li></li>');
-                    for (var i = 1; i <= self.data.imageMaxCount; i++) {
-                        self.dom.images.append('<li><img src="/assets/img/gry/thiles/boardThile_' + i + '.png" alt="memo' + i + '" /></li>');
-                        
-                    }
+            self.dom.images = jQuery('#imagesCache');
+            if(self.dom.images.find('li').length == 0){
+                self.dom.images.hide();
+                self.dom.images.append('<li></li>');
+                for (var i = 1; i <= self.data.imageMaxCount; i++) {
+                    self.dom.images.append('<li><img src="/assets/img/gry/thiles/boardThile_' + i + '.png" alt="memo' + i + '" /></li>');
+                    
                 }
+            }
 
-                self.checkLevel();
-                
-                var tabNumbers = [];
-                for (var i = 1; i <= self.data.imageCount; i++) {
-                    tabNumbers.push(i);
-                    tabNumbers.push(i);
+            self.checkLevel();
+            
+            var tabNumbers = [];
+            for (var i = 1; i <= self.data.imageCount; i++) {
+                tabNumbers.push(i);
+                tabNumbers.push(i);
+            }
+            
+            var iteration = 7 - self.data.imageCount;
+            while (--iteration) {
+                var imgTabIndex = Math.floor( Math.random() * self.data.imgTab.length );
+                self.data.imgTab.splice(imgTabIndex, 1);
+            }
+
+            iteration = self.data.imageCount;
+            while (--iteration) self.randomizeArray(tabNumbers);
+
+            // if(self.data.boardWidth == 3) self.dom.board.css("width","550px"); 
+            // else self.dom.board.css("width","720px"); 
+
+            var counter = 0;
+            for (var i = 0; i < self.data.boardHeight; i++) {
+                self.data.tab[i] = [];
+                for (var j = 0; j < self.data.boardWidth; j++) {
+                    self.data.tab[i][j] = tabNumbers[counter++];
+                    self.dom.board.append("<li id='board_"+i+"_"+j+"' />");
+                    height = $('#board_0_0').width();
+                    $('#board_'+ i + '_'+j).height(height);
                 }
-                
-                var iteration = 7 - self.data.imageCount;
-                while (--iteration) {
-                    var imgTabIndex = Math.floor( Math.random() * self.data.imgTab.length );
-                    self.data.imgTab.splice(imgTabIndex, 1);
-                }
-
-                iteration = self.data.imageCount;
-                while (--iteration) self.randomizeArray(tabNumbers);
-
-                // if(self.data.boardWidth == 3) self.dom.board.css("width","550px"); 
-                // else self.dom.board.css("width","720px"); 
-
-                var counter = 0;
-                for (var i = 0; i < self.data.boardHeight; i++) {
-                    self.data.tab[i] = [];
-                    for (var j = 0; j < self.data.boardWidth; j++) {
-                        self.data.tab[i][j] = tabNumbers[counter++];
-                        self.dom.board.append("<li id='board_"+i+"_"+j+"' />");
-                        height = $('#board_0_0').width();
-                        $('#board_'+ i + '_'+j).height(height);
-                    }
-                }
-                self.dom.board.find('li').on('touchstart click', function () {
-                    self.checkClick($(this));
-                });
+            }
+            self.dom.board.find('li').on('touchstart click', function () {
+                self.checkClick($(this));
+            });
             
         };
         self.checkLevel = function () {
