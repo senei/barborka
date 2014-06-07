@@ -25,17 +25,16 @@
   </head>
 
   <body>
-    <div id="wrap">
     <header>
       <div><a href="/">Barbórka</a></div>
       <ul id="menu">
         <li id="magic-line"></li>
-        <li {% if page.menu == 0 %}class="current_page"{% endif %}><a href="/o-barborce/">O BARBÓRCE</a></li>
-        <li {% if page.menu == 1 %}class="current_page"{% endif %}><a href="/infografiki/">INFOGRAFIKI</a></li>
-        <li {% if page.menu == 2 %}class="current_page"{% endif %}><a href="/gry/">GRY</a></li>
-        <li {% if page.menu == 3 %}class="current_page"{% endif %}><a href="/pobierz/">POBIERZ</a></li>
-        <li {% if page.menu == 4 %}class="current_page"{% endif %}><a href="/kontakt/">KONTAKT</a></li>
-        <li {% if page.menu == 5 %}class="current_page"{% endif %}><a href="/partnerzy/">PARTNERZY</a></li>
+        <li ><a href="/#o-barborce">O BARBÓRCE</a></li>
+        <li class="hide {% if page.menu == 1 %}current_page{% endif %}"><a href="/infografiki/">INFOGRAFIKI</a></li>
+        <li class="hide {% if page.menu == 2 %}current_page{% endif %}"><a href="/gry/">GRY</a></li>
+        <li ><a href="/#pobierz">POBIERZ</a></li>
+        <li ><a href="/#kontakt">KONTAKT</a></li>
+        <li ><a href="/#partnerzy">PARTNERZY</a></li>
 
       </ul>
       <ul id="lang">
@@ -46,10 +45,26 @@
       
     </header>
 
-    <section {% if page.class %}class="{{page.class}}"{% endif %}>
+    <section class="home">
       {{ content }}
     </section>
-    </div>
+    <hr/>
+    <section id="o-barborce">
+      {% include o-barborce.html %}
+    </section>
+    <hr/>
+    <section id="pobierz">
+      {% include pobierz.html %}
+    </section>
+    <hr/>
+    <section id="kontakt">
+      {% include kontakt.html %}
+    </section>
+    <hr/>
+    <section id="partnerzy">
+      {% include partnerzy.html %}
+    </section>
+
     <footer> 
       <small> &copy; 2014 - senei_web </small>
     </footer>

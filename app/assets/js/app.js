@@ -1,5 +1,4 @@
 $(function() {
-
     var $magicLine = $("#menu #magic-line");
     function init(){
         if($magicLine.length == 1){
@@ -9,15 +8,30 @@ $(function() {
                 .css("left", $(".current_page a").position().left - 2)
                 .css("top", $(".current_page a").position().top + 26);
         }
-
         $magicLine
             .data("origTop", Math.floor($magicLine.position().top))
             .data("origLeft", Math.floor($magicLine.position().left))
             .data("origWidth", $magicLine.width());
-        
-
         }
+    }
+    function active(){
+        $el = $('li.active').find('a');
         
+        if($el.position()){
+            leftPos = Math.floor($el.position().left-2);
+            topPos = Math.floor($el.position().top+26);
+            newWidth = $el.width()+4;
+        } else {
+            leftPos = -2;
+            topPos = 28;
+            newWidth = 0;
+        }
+
+        $magicLine.stop().animate({
+            left: leftPos,
+            top: topPos,
+            width: newWidth
+        });
     }
     init();
     window.onresize = function(event) {
@@ -26,14 +40,19 @@ $(function() {
     $("#menu li").hover(function() {
         $el = $(this).find('a');
         
+            $magicLine
+                .width($(".active a").width() + 4)
+                .css("left", $(".active a").position().left - 2)
+                .css("top", $(".active a").position().top + 26);
         if($el.position()){
             leftPos = Math.floor($el.position().left-2);
             topPos = Math.floor($el.position().top+26);
+            newWidth = $el.width()+4;
         } else {
             leftPos = -2;
             topPos = 28;
+            newWidth = 0;
         }
-        newWidth = $el.width()+4;
         $magicLine.stop().animate({
             left: leftPos,
             top: topPos,
@@ -47,7 +66,53 @@ $(function() {
         });    
     });
 
+// Cache selectors
+var lastId,
+    topMenu = $("header"),
+    topMenuHeight = topMenu.outerHeight(),
+    // All list items
+    menuItems = topMenu.find("a[href^='/#']"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+        var href = $(this).attr("href").slice( 1 );
+      var item = $(href);
+      if (item.length) { return item; }
+    });
 
+    // Bind click handler to menu items
+    // so we can get a fancy scroll animation
+    menuItems.click(function(e){
+      var href = $(this).attr("href").slice( 1 ),
+          offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+      $('html, body').stop().animate({ 
+          scrollTop: offsetTop
+      }, 300);
+      e.preventDefault();
+    });
+
+    // Bind to scroll
+    $(window).scroll(function(){
+       // Get container scroll position
+       var fromTop = $(this).scrollTop()+topMenuHeight;
+       
+       // Get id of current scroll item
+       var cur = scrollItems.map(function(){
+         if ($(this).offset().top < fromTop)
+           return this;
+       });
+       // Get the id of the current element
+       cur = cur[cur.length-1];
+       var id = cur && cur.length ? cur[0].id : "";
+       
+       if (lastId !== id) {
+           lastId = id;
+           // Set/remove active class
+           menuItems
+             .parent().removeClass("active")
+             .end().filter("[href='/#"+id+"']").parent().addClass("active");
+            active();
+       }                   
+    });
 
     //games
 
