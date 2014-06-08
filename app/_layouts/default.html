@@ -45,9 +45,10 @@
       
     </header>
 
-    <section class="home">
+    <section class="{{page.class}}">
       {{ content }}
     </section>
+    {% if page.class == 'home' %}
     <hr/>
     <section id="o-barborce">
       {% include o-barborce.html %}
@@ -68,7 +69,7 @@
     <footer> 
       <small> &copy; 2014 - senei_web </small>
     </footer>
-
+    {% endif %}
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->

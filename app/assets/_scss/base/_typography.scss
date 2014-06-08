@@ -66,7 +66,9 @@ hr {
   border-left: none;
   border-right: none;
   border-top: none;
-  margin: $base-line-height 0;
+  margin: $base-line-height auto;
+  border-bottom: 3px solid #05a778;
+  width: 98%;
 }
 
 img {
