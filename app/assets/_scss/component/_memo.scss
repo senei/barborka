@@ -1,0 +1,70 @@
+//memo
+section.memo{
+	width: 774px;
+	max-width: 774px;
+	min-width: 774px;
+	min-height: 403px;
+	//
+	div.gornik{
+		background: transparent url("../img/gry/gornik.png") no-repeat;
+		background-size: cover;
+		position: absolute;
+		bottom: -400px;
+		@include transition (width 0.6s ease-in 0.2s,height 0.6s ease-in 0.2s,bottom 1.0s ease-in 0.2s);
+		left: 30%;
+		width: 320px;
+		height: 320px;
+	}
+	ul#memoGame,
+	ul#imagesCache {
+		background: #eff1f0;
+		margin: 0px auto;
+		padding: 20px;
+	}
+
+	ul#memoGame li,
+	ul#imagesCache li{
+		list-style-type: none;
+  	text-align: center;
+		
+	}
+	ul#imagesCache {
+		display: none;
+	}
+	ul#memoGame li {
+		background: url(../img/gry/thiles/memo_0.png) center no-repeat;
+		float: left;
+		width: 25%;
+		height: 100px;
+		background-size: cover;
+		cursor: pointer;
+		background-size: 90%;
+		
+		&.memo_1 {
+			background-image: url(../img/gry/thiles/memo_1.png);
+		}
+
+		&.memo_2 {
+			background-image: url(../img/gry/thiles/memo_2.png);
+		}
+
+		&::selection {
+			background: none;
+		}
+		img{	
+  		@include transition (max-height 1.0s ease-in 0.2s,
+  														 margin 1.0s ease-in 0.2s,
+  												  max-width 1.0s ease-in 0.2s);
+			&::selection {
+				background: none;
+			}
+		}
+		&.blocked {
+			background: none;
+			& > img {
+				margin: 50%;
+				max-width:0%;
+			}
+		}
+	}
+}

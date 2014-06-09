@@ -1,0 +1,49 @@
+body.games > header {
+	@include outer-container;
+	position: relative;
+	padding: 0px;
+}
+body.games > header h3{
+
+	padding: 			1.4em;
+	font-weight: 	bold;
+	font-size: 	 	1.8em;
+	text-align:  	center;
+}
+body.games > header a.close_x{
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  margin-left: 300px;
+  img{
+  	max-width: 90%;
+		@include transition (all 0.3s ease-in 0.2s);
+
+  }
+  &:hover img{
+		max-width: 100%;
+	  top: 10px;
+
+  }
+}
+
+.games {
+	margin:auto;
+	position: relative;
+	overflow: hidden;
+	ul{
+		@include outer-container;
+		max-width: 100%;
+		width: 100%;
+		margin: 0 auto;
+		
+		&::selection {
+			background: none;
+		}
+	}
+	
+}
+
+@import "memo";
+@import "slownik";
+

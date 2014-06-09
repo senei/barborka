@@ -1,0 +1,92 @@
+section.info {
+	text-align: center;
+	margin-right: 0px;
+	margin-left: 0px;
+	ul.content, ul.tabs {
+		@include outer-container;
+		max-width: 480px;
+		width: 100%;
+	  @include row(table);
+	
+	}
+	ul.content{
+		max-width: 700px;		
+	}
+	
+	ul.content li {
+		display: none;
+		text-align: center;
+		padding-top: 10px;
+		&.selected {
+			display: block;
+		}
+		p {
+			font-size: 14px;
+		}
+		button {
+			background-color: #be202e;
+			border: none;
+			padding: 5px 40px 10px;
+			display: block;
+			margin: 0 auto;
+			
+			font-family: "Bree Serif";
+			font-weight: normal;
+			font-size: 21px;
+			color: white;
+			margin-top: 20px;
+			letter-spacing: 0.1em;
+
+		}
+	}
+	ul.tabs li {
+
+		@include span-columns(1 of 3);
+		
+		text-align: center;
+
+		background: black url(../img/gry/mask8white.png) center center no-repeat;
+		background-size: auto 250px;
+
+    transition: background-size 0.2s ease-in, background-color 0.5s ease;
+    -moz-transition: background-size 0.2s ease-in, background-color 0.5s ease;
+    -web-kit-transition: background-size 0.2s ease-in, background-color 0.5s ease;
+
+		height: 190px; 
+
+		&:hover, &.selected {
+			background-size: auto 280px;
+			background-color: #be202e;
+			cursor:pointer;
+		}
+		
+		h3{
+			margin-top: 70px;
+			color: white;
+			font-size: 1em;
+			color: white;
+			&>span{
+				position: relative;
+				top: 8px;
+			}
+		}
+		
+	}
+	
+	div#infoContent {
+		background-color: #a8dacb;
+		height: 2000px;
+		min-width: 960px;
+		width: 100%;
+		max-width: 100%;
+		//
+		position: relative;
+		left: 0px;
+		top: 200px;
+		padding-top: 190px;
+		//
+		background: #a8dacb url(../img/info/top.png) top center repeat-x;
+
+
+	}
+}
