@@ -4,7 +4,7 @@ body.games > header {
 	padding: 0px;
 }
 body.games > header h3{
-
+	font-family: Dosis;
 	padding: 			1.4em;
 	font-weight: 	bold;
 	font-size: 	 	1.8em;
@@ -31,6 +31,7 @@ body.games > header a.close_x{
 	margin:auto;
 	position: relative;
 	overflow: hidden;
+	padding: 0px;
 	ul{
 		@include outer-container;
 		max-width: 100%;
