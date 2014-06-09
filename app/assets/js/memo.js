@@ -71,15 +71,15 @@
                     self.data.tab[i][j] = tabNumbers[counter++];
                     self.dom.board.append("<li id='board_"+i+"_"+j+"' class='memo_"+(counter%3)+"'/>");
                     
-                    if(self.data.size == 0){
-                        self.data.size = $('#board_0_0').width();
-                        height = $(window).height()-180;
-                        console.log(height);
-                        if(height / 3 < self.data.size) self.data.size = height / 3;
-                        width = 40+(self.data.size)*4+"px";
-                        self.dom.board.css('max-width',width);
-                    }
-                    $('#board_'+ i + '_'+j).height(self.data.size).width(self.data.size);
+                    // if(self.data.size == 0){
+                    //     height = $(window).height()-180;
+                    //     console.log(height);
+                    //     if(height / 3 < self.data.size) self.data.size = height / 3;
+                    //     width = 40+(self.data.size)*4+"px";
+                    //     self.dom.board.css('max-width',width);
+                    // }
+                    self.data.size = $('#board_0_0').width();
+                    $('#board_'+ i + '_'+j).height(self.data.size);
                 }
             }
             var gornik = self.dom.images.find('li').eq(0).find("img").clone();
@@ -132,18 +132,28 @@
                 if (self.data.firstIndexX != self.data.secondIndexX || self.data.firstIndexY != self.data.secondIndexY) {
                     if (self.data.firstNumber == self.data.secondNumber) { // correct
                         self.data.selected++;
-                        self.dom.board.find('#board_' + self.data.firstIndexX + '_' + self.data.firstIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
-                        self.dom.board.find('#board_' + self.data.secondIndexX + '_' + self.data.secondIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
-                       
+                        setTimeout(function () {
+                            self.dom.board.find('#board_' + self.data.firstIndexX + '_' + self.data.firstIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
+                            self.dom.board.find('#board_' + self.data.secondIndexX + '_' + self.data.secondIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
+                        });                       
                         if (self.data.selected == self.data.imageCount) {
                            $('div.gornik')
-                                    .css('background-position-x', "0%")
-                                    .css('bottom',20); 
+                                .css('background-position-x', "0%")
+                                .css('bottom',0); 
                             setTimeout(function () {
                                 $('div.gornik')
                                     .css('background-position-x', "100%")
+                                    .css('width', "340px")
+                                    .css('height', "340px");
+                                setTimeout(function () {
+                                $('div.gornik')
+                                    .css('background-position-x', "0%")
+                                    .css('width', "320px")
+                                    .css('height', "320px")
                                     .css('bottom',-400); 
                                  self.init();
+                                }, 2000);
+                                 //self.init();
                             }, 2000);
                         }
                     } else { // incorrect

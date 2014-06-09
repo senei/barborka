@@ -125,10 +125,10 @@ $(function() {
 	});
 
 	if ($("section.games").length > 0) {
-		height = Math.floor($(window).height() / 3 - 180 / 3);
-		width = 40 + (height) * 4 + "px";
-		height = 40 + (height) * 3 + "px";
-		$("section.games").css('max-width', width).css('max-height', height);
+		// height = Math.floor($(window).height() / 3 - 180 / 3);
+		// width = 40 + (height) * 4 + "px";
+		// height = 40 + (height) * 3 + "px";
+		// $("section.games").css('max-width', width).css('max-height', height);
 
 		if ($("#memoGame").length > 0) {
 			new memoGame('memoGame').init();
