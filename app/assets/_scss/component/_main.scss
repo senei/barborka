@@ -1,9 +1,9 @@
 
 html, body {height: 100%;}
 body {
-	margin-top: 150px;
+	padding-top: 150px;
 	@media (max-width: 660px) {
-		margin-top: 300px;
+		padding-top: 300px;
 	}
 }
 header {
@@ -105,10 +105,8 @@ section {
 		font-size: 3em;
 		font-weight: 400;
 	}
-	&.odlicznie {
-		background: transparent url("../img/odliczanie.jpg") center center no-repeat;
-		height: 500px;
-
+	&.home {
+		padding-top: 0px;
 	}
 	h1{
 		text-align: left;

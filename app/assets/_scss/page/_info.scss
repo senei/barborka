@@ -2,7 +2,9 @@ section.info {
 	text-align: center;
 	margin-right: 0px;
 	margin-left: 0px;
-	ul.content, ul.tabs {
+	padding: 0;
+
+	ul.tabs {
 		@include outer-container;
 		max-width: 480px;
 		width: 100%;
@@ -10,7 +12,7 @@ section.info {
 	
 	}
 	ul.content{
-		max-width: 700px;		
+		max-width: 100%;		
 	}
 	
 	ul.content li {
@@ -73,20 +75,52 @@ section.info {
 		
 	}
 	
-	div#infoContent {
+	ul.content li div.info {
 		background-color: #a8dacb;
-		height: 2000px;
+		min-height: 2000px;
 		min-width: 960px;
 		width: 100%;
 		max-width: 100%;
+		overflow: hidden;
 		//
 		position: relative;
 		left: 0px;
 		top: 200px;
-		padding-top: 190px;
+		padding-top: 160px;
 		//
-		background: #a8dacb url(../img/info/top.png) top center repeat-x;
+		line-height: 0em;
+		h2, p{
+			position: absolute;
+			top: -200px;
+			left: 50%;
+		}
+		h2{
+			color: white;
+			font-family: "Dosis";
+			font-weight: bold;
+			font-size: 45px;
+		}
+		img{
+			max-width: 0px;
+			min-width: 100%;
+		}
+		&.info_3 {
+			background: #a8dacb url(../img/info/03/top.png) top center repeat-x;
 
+			& > h2{
+				top: 45px;
+				left: 50%;
+				margin-left: -150px;
+			}
+		}
+		&.info_2 {
+			background: #a8dacb url(../img/info/02/top.png) top center repeat-x;
 
+			& > h2{
+				top: 45px;
+				left: 50%;
+				margin-left: -150px;
+			}
+		}
 	}
 }

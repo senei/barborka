@@ -180,8 +180,7 @@
         };
 
         self.hide = function () {
-            self.dom.board.find('#board_' + self.data.firstIndexX + '_' + self.data.firstIndexY).html('');
-            self.dom.board.find('#board_' + self.data.secondIndexX + '_' + self.data.secondIndexY).html('');
+            self.dom.board.find('li').not( ".blocked" ).html('');
             self.dom.board.find('li').not( ".blocked" ).bind('click', function () {
                 self.checkClick($(this));
             });

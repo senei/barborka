@@ -1,5 +1,6 @@
 section.gry {
 	text-align: center;
+	padding: 0;
 	ul.content, ul.tabs {
 		@include outer-container;
 		max-width: 480px;
