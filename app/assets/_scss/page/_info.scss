@@ -5,10 +5,10 @@ section.info {
 	padding: 0;
 
 	ul.tabs {
+
 		@include outer-container;
 		max-width: 480px;
 		width: 100%;
-	  @include row(table);
 	
 	}
 	ul.content{
@@ -42,9 +42,9 @@ section.info {
 		}
 	}
 	ul.tabs li {
-
 		@include span-columns(1 of 3);
-		
+		width: 33%;
+		margin-right: 0;
 		text-align: center;
 
 		background: black url(../img/gry/mask8white.png) center center no-repeat;
@@ -57,6 +57,7 @@ section.info {
 		height: 190px; 
 
 		&:hover, &.selected {
+			
 			background-size: auto 280px;
 			background-color: #be202e;
 			cursor:pointer;
