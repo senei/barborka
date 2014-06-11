@@ -128,18 +128,36 @@ $(function() {
 	});
 
 	if ($("section.games").length > 0) {
+		// height = Math.floor($(window).height() / 3 - 180 / 3);
+		// width = 40 + (height) * 4 + "px";
+		// height = 40 + (height) * 3 + "px";
+		// $("section.games").css('max-width', width).css('max-height', height);
+
 		if ($("#memoGame").length > 0) {
 			new memoGame('memoGame').init();
 		}
 		if ($("#slownikGameBord").length > 0) {
 			new slowaGame('memoGame').init();	
+
+			// setTimeout(function() {
+			// 	$("#slownikGameBord li").removeClass('off');
+			// 	$("#slownikGameBord li button").on('touchstart click', function() {
+			// 		var li = $(this).parent();
+			// 		if (li.hasClass('no-off')) {
+			// 			li.addClass('no').removeClass('no-off');
+			// 			setTimeout(function() {
+			// 				li.addClass('no-off').removeClass('no');
+			// 			}, 1000);
+			// 		} else if (li.hasClass('yes-off')) {
+			// 			li.addClass('yes').removeClass('yes-off');
+			// 			setTimeout(function() {
+			// 				li.addClass('yes-off').removeClass('yes');
+			// 				$("#slownikGameBord li").addClass('off');
+			// 			}, 2000);
+			// 		}
+			// 	});
+			// }, 1000);
+
 		}
 	}
-
-	// info 
-	$('a.top').on('touchstart click', function() {
-	$('html, body').stop().animate({
-			scrollTop: 0
-		}, 300);
-	});
 });
