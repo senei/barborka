@@ -8,7 +8,6 @@ section.info {
 
 		@include outer-container;
 		max-width: 480px;
-		width: 100%;
 	
 	}
 	ul.content{
@@ -43,7 +42,7 @@ section.info {
 	}
 	ul.tabs li {
 		@include span-columns(1 of 3);
-		width: 33%;
+		width: 33.33%;
 		margin-right: 0;
 		text-align: center;
 

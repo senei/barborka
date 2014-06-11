@@ -4,7 +4,6 @@ section.gry {
 	ul.content, ul.tabs {
 		@include outer-container;
 		max-width: 480px;
-		width: 100%;
 	
 	}
 	ul.content{
@@ -40,7 +39,7 @@ section.gry {
 	}
 	ul.tabs li {
 		@include span-columns(1 of 3);
-		width: 33%;
+		width: 33.33%;
 		margin-right: 0;
 		text-align: center;
 
