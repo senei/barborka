@@ -30,10 +30,10 @@
       <ul id="menu">
         <li id="magic-line"></li>
         <li ><a href="/#o-barborce">O BARBÓRCE</a></li>
+        <li ><a href="/#kontakt">KONTAKT</a></li>
         <li class="hide {% if page.menu == 1 %}current_page{% endif %}"><a href="/infografiki/">INFOGRAFIKI</a></li>
         <li class="hide {% if page.menu == 2 %}current_page{% endif %}"><a href="/gry/">GRY</a></li>
         <li ><a href="/#pobierz">POBIERZ</a></li>
-        <li ><a href="/#kontakt">KONTAKT</a></li>
         <li ><a href="/#partnerzy">PARTNERZY</a></li>
       </ul>
       <ul id="lang">
@@ -49,18 +49,22 @@
     </section>
     {% if page.class == 'home' %}
     <hr/>
+    <h3>O BARBORCE</h3>
     <section id="o-barborce">
       {% include o-barborce.html %}
     </section>
     <hr/>
-    <section id="pobierz">
-      {% include pobierz.html %}
-    </section>
-    <hr/>
+    <h3>KONTAKT</h3>
     <section id="kontakt">
       {% include kontakt.html %}
     </section>
     <hr/>
+    <h3>POBIERZ</h3>
+    <section id="pobierz">
+      {% include pobierz.html %}
+    </section>
+    <hr/>
+    <h3>PARTNERZY</h3>
     <section id="partnerzy">
       {% include partnerzy.html %}
     </section>

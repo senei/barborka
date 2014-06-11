@@ -4,7 +4,7 @@ body.games > header {
 	padding: 0px;
 }
 body.games > header h3{
-	font-family: Dosis;
+	font-family: "Dosis";
 	padding: 			1.4em;
 	font-weight: 	bold;
 	font-size: 	 	1.8em;
@@ -15,16 +15,15 @@ body.games > header a.close_x{
   left: 50%;
   top: 15px;
   margin-left: 300px;
-  img{
-  	max-width: 90%;
+	width: 60px;
+	img {
+		max-width: 90%;
 		@include transition (all 0.3s ease-in 0.2s);
-
-  }
-  &:hover img{
+	}
+	&:hover img {
 		max-width: 100%;
-	  top: 10px;
-
-  }
+  	margin: -5%;
+	}
 }
 
 .games {

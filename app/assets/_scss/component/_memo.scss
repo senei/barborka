@@ -52,9 +52,9 @@ section.memo{
 			background: none;
 		}
 		img{	
-  		@include transition (max-height 1.0s ease-in 0.2s,
-  														 margin 1.0s ease-in 0.2s,
-  												  max-width 1.0s ease-in 0.2s);
+  		@include transition (max-height 0.4s ease-in 0.1s,
+  														 margin 0.4s ease-in 0.1s,
+  												  max-width 0.4s ease-in 0.1s);
 			&::selection {
 				background: none;
 			}

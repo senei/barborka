@@ -13,13 +13,14 @@ section.gry {
 	
 	ul.content li {
 		display: none;
-		text-align: center;
+		text-align: left;
 		padding-top: 10px;
 		&.selected {
 			display: block;
 		}
 		p {
 			font-size: 14px;
+
 		}
 		button {
 			background-color: #be202e;
@@ -30,7 +31,7 @@ section.gry {
 			
 			font-family: "Bree Serif";
 			font-weight: normal;
-			font-size: 21px;
+			font-size: 18px;
 			color: white;
 			margin-top: 20px;
 			letter-spacing: 0.1em;
@@ -44,22 +45,22 @@ section.gry {
 		text-align: center;
 
 		background: black url(../img/gry/mask8white.png) center center no-repeat;
-		background-size: auto 250px;
+		background-size: auto 100%;
 
     transition: background-size 0.2s ease-in, background-color 0.5s ease;
     -moz-transition: background-size 0.2s ease-in, background-color 0.5s ease;
     -web-kit-transition: background-size 0.2s ease-in, background-color 0.5s ease;
 
-		height: 190px; 
+		height: 160px; 
 
 		&:hover, &.selected {
-			background-size: auto 280px;
+			background-size: auto 115%;
 			background-color: #be202e;
 			cursor:pointer;
 		}
 		
 		h3{
-			margin-top: 70px;
+			margin-top: 60px;
 			color: white;
 			font-size: 1em;
 			color: white;

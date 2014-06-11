@@ -133,26 +133,22 @@
                     if (self.data.firstNumber == self.data.secondNumber) { // correct
                         self.data.selected++;
                         setTimeout(function () {
-                            self.dom.board.find('#board_' + self.data.firstIndexX + '_' + self.data.firstIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
-                            self.dom.board.find('#board_' + self.data.secondIndexX + '_' + self.data.secondIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
-                        });                       
+                        self.dom.board.find('#board_' + self.data.firstIndexX + '_' + self.data.firstIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
+                        self.dom.board.find('#board_' + self.data.secondIndexX + '_' + self.data.secondIndexY).unbind('click').css('cursor', 'default').addClass('blocked');
+                        }, 50);
                         if (self.data.selected == self.data.imageCount) {
                            $('div.gornik')
                                 .css('background-position-x', "0%")
                                 .css('bottom',0); 
                             setTimeout(function () {
                                 $('div.gornik')
-                                    .css('background-position-x', "100%")
-                                    .css('width', "340px")
-                                    .css('height', "340px");
+                                    .css('background-position-x', "100%");
                                 setTimeout(function () {
                                 $('div.gornik')
                                     .css('background-position-x', "0%")
-                                    .css('width', "320px")
-                                    .css('height', "320px")
                                     .css('bottom',-400); 
-                                 self.init();
-                                }, 2000);
+                                    self.init();
+                                }, 500);
                                  //self.init();
                             }, 2000);
                         }

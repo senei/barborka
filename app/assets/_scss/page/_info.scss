@@ -48,23 +48,22 @@ section.info {
 		text-align: center;
 
 		background: black url(../img/gry/mask8white.png) center center no-repeat;
-		background-size: auto 250px;
+		background-size: auto 100%;
 
     transition: background-size 0.2s ease-in, background-color 0.5s ease;
     -moz-transition: background-size 0.2s ease-in, background-color 0.5s ease;
     -web-kit-transition: background-size 0.2s ease-in, background-color 0.5s ease;
 
-		height: 190px; 
+		height: 160px; 
 
 		&:hover, &.selected {
-			
-			background-size: auto 280px;
+			background-size: auto 115%;
 			background-color: #be202e;
 			cursor:pointer;
 		}
 		
 		h3{
-			margin-top: 70px;
+			margin-top: 60px;
 			color: white;
 			font-size: 1em;
 			color: white;
@@ -125,4 +124,44 @@ section.info {
 			}
 		}
 	}
+}
+
+body.infoGrafiki {
+	padding: 0px;
+	margin: 0px;
+	section.info{
+		text-align: center;
+		margin: 0px;
+		padding: 0;
+		line-height: 0px;
+
+	}
+	& > a.close_x {
+  	position: fixed;
+  	left: 95%;
+  	top: 15px;
+  	width: 60px;
+  	img {
+  		max-width: 90%;
+			@include transition (all 0.3s ease-in 0.2s);
+  	}
+  	&:hover img {
+			max-width: 100%;
+	  	margin: -5%;
+  	}
+	}
+	& > a.top {
+  	position: fixed;
+  	left: 95%;
+  	bottom: 15px;
+  	width: 60px;
+  	img {
+  		max-width: 90%;
+			@include transition (all 0.3s ease-in 0.2s);
+  	}
+  	&:hover img {
+			max-width: 100%;
+	  	margin: -5%;
+  	}
+	}	
 }

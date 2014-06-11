@@ -25,12 +25,13 @@
     <!-- endbuild -->
   </head> 
 
-  <body class="infoGrafiki">
-    
-    <section class="{% if page.class %}{{page.class}} {% endif %}">
+  <body class="infoGrafiki" id="top">
+    <section class="info {% if page.class %}{{page.class}} {% endif %}">
       {{ content }}
     </section>
-    
+    <a href="/infografiki/" class="close_x"><img src="/assets/img/icon/close_x.png" alt=""></a>
+    <a href="#top" class="top"><img src="/assets/img/icon/top.png" alt=""></a>
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
