@@ -80,14 +80,14 @@ $(function() {
 
 	// Bind click handler to menu items
 	// so we can get a fancy scroll animation
-	menuItems.click(function(e) {
-		var href = $(this).attr("href").slice(1),
-			offsetTop = href === "/#" ? 0 : $(href).offset().top - topMenuHeight + 1;
-		$('html, body').stop().animate({
-			scrollTop: offsetTop
-		}, 300);
-		e.preventDefault();
-	});
+	// menuItems.click(function(e) {
+	// 	var href = $(this).attr("href").slice(1),
+	// 		offsetTop = href === "/#" ? 0 : $(href).offset().top - topMenuHeight + 1;
+	// 	$('html, body').stop().animate({
+	// 		scrollTop: offsetTop
+	// 	}, 300);
+	// 	e.preventDefault();
+	// });
 
 	// Bind to scroll
 	// $(window).scroll(function() {
