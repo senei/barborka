@@ -66,7 +66,7 @@ $(function() {
 	// Cache selectors
 	var lastId,
 		topMenu = $("header"),
-		topMenuHeight = topMenu.outerHeight()+150,
+		topMenuHeight = topMenu.outerHeight()+50,
 		// All list items
 		menuItems = topMenu.find("a[href*='#']"),
 		// Anchors corresponding to menu items
