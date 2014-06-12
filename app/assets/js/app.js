@@ -59,7 +59,7 @@ $(function() {
 			new slowaGame('memoGame').init();	
 		}
 	}
-	
+
 	$("#menu li").hover(function() {
 		$el = $(this).find('a');
 		if ($el.position()) {
@@ -92,8 +92,8 @@ $(function() {
 		menuItems = topMenu.find("a[href*='#']"),
 		// Anchors corresponding to menu items
 		scrollItems = menuItems.map(function() {
-			var href = $(this).attr("href").slice(1);
-			var item = $(href);
+			var href = $(this).attr("href").split("#")[1];
+			var item = $("#"+href);
 			if (item.length) {
 				return item;
 			}
