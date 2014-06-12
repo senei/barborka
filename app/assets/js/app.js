@@ -39,6 +39,27 @@ $(function() {
 	window.onresize = function(event) {
 		init();
 	};
+
+		//games
+
+	$('ul.tabs li').on('touchstart click', function() {
+		$('ul.tabs li').removeClass('selected');
+		$('ul.content li').removeClass('selected');
+		//
+		num = $('ul.tabs li').index(this);
+		$('ul.tabs li').eq(num).addClass('selected');
+		$('ul.content li').eq(num).addClass('selected');
+	});
+
+	if ($("section.games").length > 0) {
+		if ($("#memoGame").length > 0) {
+			new memoGame('memoGame').init();
+		}
+		if ($("#slownikGameBord").length > 0) {
+			new slowaGame('memoGame').init();	
+		}
+	}
+	
 	$("#menu li").hover(function() {
 		$el = $(this).find('a');
 		if ($el.position()) {
@@ -116,23 +137,5 @@ $(function() {
 	// 	}
 	// });
 
-	//games
 
-	$('ul.tabs li').on('touchstart click', function() {
-		$('ul.tabs li').removeClass('selected');
-		$('ul.content li').removeClass('selected');
-		//
-		num = $('ul.tabs li').index(this);
-		$('ul.tabs li').eq(num).addClass('selected');
-		$('ul.content li').eq(num).addClass('selected');
-	});
-
-	if ($("section.games").length > 0) {
-		if ($("#memoGame").length > 0) {
-			new memoGame('memoGame').init();
-		}
-		if ($("#slownikGameBord").length > 0) {
-			new slowaGame('memoGame').init();	
-		}
-	}
 });
