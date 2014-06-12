@@ -90,31 +90,31 @@ $(function() {
 	});
 
 	// Bind to scroll
-	$(window).scroll(function() {
-		if ($(".current_page").length == 0) {
+	// $(window).scroll(function() {
+	// 	if ($(".current_page").length == 0) {
 
-			// Get container scroll position
-			var fromTop = $(this).scrollTop() + topMenuHeight;
+	// 		// Get container scroll position
+	// 		var fromTop = $(this).scrollTop() + topMenuHeight;
 
-			// Get id of current scroll item
-			var cur = scrollItems.map(function() {
-				if ($(this).offset().top < fromTop)
-					return this;
-			});
-			// Get the id of the current element
-			cur = cur[cur.length - 1];
-			var id = cur && cur.length ? cur[0].id : "";
+	// 		// Get id of current scroll item
+	// 		var cur = scrollItems.map(function() {
+	// 			if ($(this).offset().top < fromTop)
+	// 				return this;
+	// 		});
+	// 		// Get the id of the current element
+	// 		cur = cur[cur.length - 1];
+	// 		var id = cur && cur.length ? cur[0].id : "";
 			
-			if (lastId !== id) {
-				lastId = id;
-				// Set/remove active class
-				menuItems
-					.parent().removeClass("active")
-					.end().filter("[href*='/#" + id + "']").parent().addClass("active");
-				active();
-			}
-		}
-	});
+	// 		if (lastId !== id) {
+	// 			lastId = id;
+	// 			// Set/remove active class
+	// 			menuItems
+	// 				.parent().removeClass("active")
+	// 				.end().filter("[href*='/#" + id + "']").parent().addClass("active");
+	// 			active();
+	// 		}
+	// 	}
+	// });
 
 	//games
 
@@ -128,36 +128,11 @@ $(function() {
 	});
 
 	if ($("section.games").length > 0) {
-		// height = Math.floor($(window).height() / 3 - 180 / 3);
-		// width = 40 + (height) * 4 + "px";
-		// height = 40 + (height) * 3 + "px";
-		// $("section.games").css('max-width', width).css('max-height', height);
-
 		if ($("#memoGame").length > 0) {
 			new memoGame('memoGame').init();
 		}
 		if ($("#slownikGameBord").length > 0) {
 			new slowaGame('memoGame').init();	
-
-			// setTimeout(function() {
-			// 	$("#slownikGameBord li").removeClass('off');
-			// 	$("#slownikGameBord li button").on('touchstart click', function() {
-			// 		var li = $(this).parent();
-			// 		if (li.hasClass('no-off')) {
-			// 			li.addClass('no').removeClass('no-off');
-			// 			setTimeout(function() {
-			// 				li.addClass('no-off').removeClass('no');
-			// 			}, 1000);
-			// 		} else if (li.hasClass('yes-off')) {
-			// 			li.addClass('yes').removeClass('yes-off');
-			// 			setTimeout(function() {
-			// 				li.addClass('yes-off').removeClass('yes');
-			// 				$("#slownikGameBord li").addClass('off');
-			// 			}, 2000);
-			// 		}
-			// 	});
-			// }, 1000);
-
 		}
 	}
 });
