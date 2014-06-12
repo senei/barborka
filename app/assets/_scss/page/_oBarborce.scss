@@ -1,4 +1,4 @@
-section#o-barborce {
+section#o-barborce, section#partnerzy {
 	font-size: 20px;
 	text-align: left;
 	line-height: 1.5em;
@@ -22,5 +22,13 @@ section#o-barborce {
 	}
 	p.fl{
 		text-indent:35px;
+	}
+}
+section#partnerzy a{
+	width: 33%;
+	display: inline-block;
+	&.right{
+		float: right;
+		margin-right: 30px;
 	}
 }
