@@ -147,7 +147,7 @@ $(function() {
 				
 			}
 		);
-		$('.top').onClick(function(e){
+		$('.top').click(function(e){
 			$('html, body').stop().animate({
 				scrollTop: 0
 			}, 600);
