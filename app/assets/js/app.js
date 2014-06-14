@@ -147,10 +147,11 @@ $(function() {
 				
 			}
 		);
-		$('.top').onClick(function(){
+		$('.top').onClick(function(e){
 			$('html, body').stop().animate({
 				scrollTop: 0
 			}, 600);
+			e.preventDefault();
 		})
 	}
 });
