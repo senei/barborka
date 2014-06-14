@@ -146,7 +146,12 @@ $(function() {
 				$(this).find('.claud').css('display', 'none');;
 				
 			}
-		)
+		);
+		$('.top').onClick(function(){
+			$('html, body').stop().animate({
+				scrollTop: 0
+			}, 600);
+		})
 	}
 });
 
