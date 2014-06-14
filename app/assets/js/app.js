@@ -137,5 +137,24 @@ $(function() {
 		}
 	});
 
+	if($('section.info').length>0){
+		$('section.info div.box').hover(
+			function(){
+				$(this).find('.claud').css('display', 'block');
 
+			}, function(){
+				$(this).find('.claud').css('display', 'none');;
+				
+			}
+		)
+	}
 });
+
+
+
+
+
+
+
+
+

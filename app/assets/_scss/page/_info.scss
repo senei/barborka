@@ -133,7 +133,11 @@ body.infoGrafiki {
 		margin: 0px;
 		padding: 0;
 		line-height: 0px;
-
+		position: relative;
+		img {
+			min-width: 960px;
+			//max-width: 960px;
+		}
 	}
 	& > a.close_x {
   	position: fixed;
@@ -163,4 +167,38 @@ body.infoGrafiki {
 	  	margin: -5%;
   	}
 	}	
+	button.message {
+		border: none;
+		background-color: rgba(255,255,255,0.5);
+		color: transparent;
+		padding: 8px;
+		margin: -4px;
+		width: 100%;
+		min-width: 210px;
+	}
+	div.box{
+		position: absolute;
+		top: -100px;
+		left: -100px;
+	}
+	div.claud{
+		position: relative;
+		top: 15px;
+		color: white;
+		background: #00a778;
+		width: 210px;
+		line-height: 1.2em;
+		padding: 15px 10px;
+		font-size: 14px;
+		text-align: left;
+		display: none;
+	}
+	div.claud .dash {
+		@include triangle(30px, #00a778, up);
+		position: absolute;
+		top: -15px;
+		left: 50%;
+		margin-left: -15px;
+	}
+
 }

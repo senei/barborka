@@ -295,6 +295,30 @@ module.exports = function (grunt) {
             src: ['dist/**/*.html', 'dist/assets/js/*.js']
           }
         ]
+      // },
+      // web: {
+      //   options: {
+      //     patterns: [
+      //       {
+      //         match: /("|'?)\/?assets\//g,
+      //         replacement: '$1http://barborka.edu.pl/assets/'
+      //       },
+      //       {
+      //         match: /(<a[^>]*href="?)(\/)/g,
+      //         replacement: '$1http://barborka.edu.pl/'
+      //       },
+      //       {
+      //         match: /(<form[^>]*action="?)(\/)/g,
+      //         replacement: '$1http://barborka.edu.pl/'
+      //       }
+      //     ]
+      //   },
+      //   files: [
+      //     {
+      //       expand: true,
+      //       src: ['dist/**/*.html', 'dist/assets/js/*.js']
+      //     }
+      //   ]
       }
     },
     jshint: {
