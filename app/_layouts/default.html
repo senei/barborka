@@ -27,8 +27,8 @@
         <li id="magic-line"></li>
         <li ><a href="/#o-barborce">O BARBÓRCE</a></li>
         <li ><a href="/#kontakt">KONTAKT</a></li>
-        <li class="hide {% if page.menu == 1 %}current_page{% endif %}"><a href="/infografiki/">INFOGRAFIKI</a></li>
-        <li class="hide {% if page.menu == 2 %}current_page{% endif %}"><a href="/gry/">GRY</a></li>
+        <li class="{% if page.menu == 1 %}current_page{% endif %}"><a href="/#infografiki">INFOGRAFIKI</a></li>
+        <li class="{% if page.menu == 2 %}current_page{% endif %}"><a href="/#gry">GRY</a></li>
         <li ><a href="/#pobierz">POBIERZ</a></li>
         <li ><a href="/#partnerzy">PARTNERZY</a></li>
       </ul>
@@ -53,6 +53,16 @@
     <h3>KONTAKT</h3>
     <section id="kontakt">
       {% include kontakt.html %}
+    </section>
+    <hr/>
+    <h3>INFOGRAFIKI</h3>
+    <section id="infografiki" class="info">
+      {% include infografiki.html %}
+    </section>
+    <hr/>
+    <h3>GRY</h3>
+    <section id="gry" class="gry">
+      {% include gry.html %}
     </section>
     <hr/>
     <h3>POBIERZ</h3>

@@ -42,13 +42,13 @@ $(function() {
 
 		//games
 
-	$('ul.tabs li').on('touchstart click', function() {
-		$('ul.tabs li').removeClass('selected');
-		$('ul.content li').removeClass('selected');
+	$('section.gry ul.tabs li').on('touchstart click', function() {
+		$('section.gry ul.tabs li').removeClass('selected');
+		$('section.gry ul.content li').removeClass('selected');
 		//
-		num = $('ul.tabs li').index(this);
-		$('ul.tabs li').eq(num).addClass('selected');
-		$('ul.content li').eq(num).addClass('selected');
+		num = $('section.gry ul.tabs li').index(this);
+		$('section.gry ul.tabs li').eq(num).addClass('selected');
+		$('section.gry ul.content li').eq(num).addClass('selected');
 	});
 
 	if ($("section.games").length > 0) {
@@ -87,7 +87,7 @@ $(function() {
 	// Cache selectors
 	var lastId,
 		topMenu = $("header"),
-		topMenuHeight = topMenu.outerHeight()+50,
+		topMenuHeight = topMenu.outerHeight()+150,
 		// All list items
 		menuItems = topMenu.find("a[href*='#']"),
 		// Anchors corresponding to menu items
